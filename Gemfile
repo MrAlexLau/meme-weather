@@ -28,6 +28,27 @@ gem 'spring',        group: :development
 
 gem 'underscore-rails'
 
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '>= 2.14'
+  gem 'spork'
+  gem 'spork-rails'
+  gem 'guard'
+  gem 'guard-shell'
+  gem 'guard-spork'
+  gem 'guard-rspec'
+  gem 'guard-bundler'
+  gem 'terminal-notifier-guard'
+  gem 'terminal-notifier'
+  gem "parallel_tests"
+end
+
+group :test do
+  # gem "fakeredis", :require => "fakeredis/rspec"
+  gem 'database_cleaner'
+  #gem 'vcr'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
