@@ -1,10 +1,31 @@
-<form class="location-form">
-  Enter your location:
-  <input type="text" class="location" value="78702"></input>
-  <button type="submit">Go</button>
-</form>
+<div class="home">
+<div class="hero container">
+  <h2 class="title">Meme Weather</h2>
 
-<div class="result">
-  <div class="description"></div>
+  <div class="row main-section">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="flash alert alert-danger" role="alert">
+        <span class="flash-message"></span>
+      </div>
+
+      <form class="location-form">
+        <div class="input-group">
+          <input type="text" class="form-control location" id="location" placeholder="City or Zip" value="Austin">
+
+          <span class="input-group-btn">
+            <button class="btn btn-default btn-success" type="submit"></span>Go</button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%= image_tag "ajax-loader.gif", class: 'loader' %>
+
+<div class="results container-fluid">
+  <div class="description-container">
+    <h1 class="description"></h1>
+  </div>
   <img class="meme"></img>
 </div>

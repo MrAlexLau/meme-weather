@@ -1,0 +1,42 @@
+.home {
+  text-align: center;
+
+  .hero.container {
+    margin-top: $base-line-height;
+
+    .main-section {
+      margin-top: $base-line-height * 2;
+    }
+
+    .location {
+      min-width: 300px;
+
+      @media (min-width: $screen-md-min) {
+        min-width: 500px;
+      }
+    }
+  }
+
+  .loader {
+    display: none;
+    margin-top: $base-line-height * 1.5;
+    width: $font-size-base * 3;
+  }
+
+  .results {
+    color: #FFF;
+    display: none;
+    margin-top: $base-line-height * 1.5;
+    padding: 0;
+
+    .description-container {
+      background-color: $brand-primary;
+      padding: $gutter * 2;
+    }
+
+    .meme {
+      padding-top: $base-line-height * 2;
+      max-width: 100%;
+    }
+  }
+}
