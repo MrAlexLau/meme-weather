@@ -16,6 +16,8 @@ class WeatherService
       }.merge(parse_response(response))
     end
 
+    private
+
     def parse_response(response)
       response = response.deep_symbolize_keys
 

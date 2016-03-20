@@ -50,8 +50,11 @@ end
 
 group :test do
   # gem "fakeredis", :require => "fakeredis/rspec"
+  gem 'capybara'
   gem 'database_cleaner'
-  #gem 'vcr'
+  gem 'webmock'
+  gem 'vcr'
+  gem "poltergeist"
 end
 
 # Use ActiveModel has_secure_password
