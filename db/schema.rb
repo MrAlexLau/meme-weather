@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160320151934) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
@@ -34,11 +37,11 @@ ActiveRecord::Schema.define(version: 20160320151934) do
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "weather_infos", force: true do |t|
-    t.string   "location_name",                null: false
-    t.float    "temperature",       limit: 24, null: false
-    t.string   "temperature_unit",             null: false
-    t.string   "long_description",             null: false
-    t.string   "short_description",            null: false
+    t.string   "location_name",     null: false
+    t.float    "temperature",       null: false
+    t.string   "temperature_unit",  null: false
+    t.string   "long_description",  null: false
+    t.string   "short_description", null: false
     t.datetime "last_updated_at"
   end
 
