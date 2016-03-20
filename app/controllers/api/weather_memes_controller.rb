@@ -1,6 +1,6 @@
 class Api::WeatherMemesController < ApplicationController
   def search
-    memed_weather = MemeWeatherService.new(params[:location])
-    render json: memed_weather.fetch_details(params[:theme])
+    weather_details = MemeWeatherService.fetch_details(params[:location], params[:theme])
+    render json: weather_details
   end
 end

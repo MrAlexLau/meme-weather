@@ -31,6 +31,7 @@ gem 'spring',        group: :development
 gem 'underscore-rails'
 gem 'open-weather'
 gem 'httparty'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 group :development, :test do
   gem 'factory_girl_rails'
