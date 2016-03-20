@@ -5,12 +5,14 @@ $(function() {
         temp = weatherInfo.temperature,
         tempUnit = weatherInfo.temperature_unit;
 
-    return "" + location + " is " + temp + " " + tempUnit + " and " + conditions;
+    return "" + location + " is " + temp + "&deg; " + tempUnit + " and " + conditions;
   };
 
   var fetchWeather = function (e) {
-    var value = $(".location").val();
-    var url = "/api/weather_memes/search?location=" + value;
+    // Note that the theme is hardcoded as "cats".
+    // TODO: abstract this
+    var value = $(".location").val(),
+        url = "/api/weather_memes/search?location=" + value + "&theme=cat";
 
     e.preventDefault();
 

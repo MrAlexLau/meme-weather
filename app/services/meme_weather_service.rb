@@ -3,9 +3,9 @@ class MemeWeatherService
     @location = location
   end
 
-  def fetch_details
+  def fetch_details(theme)
     weather_details = WeatherService.current_weather(@location)
-    image_url = ImageService.search(weather_details[:short_description])
+    image_url = ImageService.search("#{theme} #{weather_details[:short_description]} meme")
 
     return {
       location_name: weather_details[:location_name],

@@ -1,9 +1,22 @@
+require 'uri'
+
 class ImageService
+  class << self
+    def search(term)
+      escaped_term = URI.escape(term)
+      api_key = Rails.application.secrets.google_cse_api_key
+      google_cx = Rails.application.secrets.google_cse_cx
+      search_url = "https://www.googleapis.com/customsearch/v1?searchType=image&q=#{escaped_term}&cx=#{google_cx}&key=#{api_key}"
 
-  # TODO: implement me
-  def self.search(description)
-    image_url = 'https://s-media-cache-ak0.pinimg.com/564x/93/19/9d/93199d71abe900e034703bf11e4dfbef.jpg'
+      parse_response(HTTParty.get(search_url))
+    end
 
-    image_url
+    private
+
+    def parse_response(response)
+      response = response.deep_symbolize_keys
+      item = response[:items].sample
+      item[:link]
+    end
   end
 end

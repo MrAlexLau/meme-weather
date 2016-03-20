@@ -77,6 +77,9 @@ GEM
       spork (>= 0.8.4)
     hike (1.2.3)
     hitimes (1.2.2)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -96,6 +99,7 @@ GEM
     mime-types (2.99.1)
     minitest (5.8.4)
     multi_json (1.11.2)
+    multi_xml (0.5.5)
     open-weather (0.11.0)
       json
     parallel (1.6.0)
@@ -200,6 +204,7 @@ DEPENDENCIES
   guard-rspec
   guard-shell
   guard-spork
+  httparty
   jbuilder (~> 2.0)
   jquery-rails
   open-weather

@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 
 gem 'underscore-rails'
 gem 'open-weather'
+gem 'httparty'
 
 group :development, :test do
   gem 'factory_girl_rails'
