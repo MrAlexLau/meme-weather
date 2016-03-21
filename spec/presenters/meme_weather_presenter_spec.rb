@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe MemeWeatherService do
+describe MemeWeatherPresenter do
   let(:location) { 'Denver' }
   let(:theme) { 'dog' }
-  subject { MemeWeatherService }
+  subject { MemeWeatherPresenter }
 
   describe "#fetch_details" do
     it "returns weather information" do
