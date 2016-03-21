@@ -27,31 +27,31 @@ class MemeWeatherService
     def weather_from_service(location)
       time_threshold = Time.zone.now - 1.hour
 
-      weather_details = WeatherService.current_weather(location)
+      current_weather = WeatherService.current_weather(location)
 
       # TODO: consider making this a background job
 
       # After the service normalizes the location name,
       # check to see if any other records already match this location.
-      wi = WeatherInfo.updated_after(time_threshold).where(location_name: weather_details[:location_name]).first
+      weather_info = WeatherInfo.updated_after(time_threshold).where(location_name: current_weather[:location_name]).first
 
       # If no record is found, create a new one.
-      unless wi
-        wi = WeatherInfo.new({
-          location_name: weather_details[:location_name],
-          temperature: weather_details[:temperature],
-          temperature_unit: weather_details[:temperature_unit],
-          long_description: weather_details[:long_description],
-          short_description: weather_details[:short_description],
+      unless weather_info
+        weather_info = WeatherInfo.new({
+          location_name: current_weather[:location_name],
+          temperature: current_weather[:temperature],
+          temperature_unit: current_weather[:temperature_unit],
+          long_description: current_weather[:long_description],
+          short_description: current_weather[:short_description],
           last_updated_at: Time.zone.now
         })
       end
 
       # Add the given location to the tags for the weather record.
-      wi.location_list.add(location)
-      wi.save
+      weather_info.location_list.add(location)
+      weather_info.save
 
-      wi
+      weather_info
     end
 
   end
