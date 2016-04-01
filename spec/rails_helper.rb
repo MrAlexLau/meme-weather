@@ -23,6 +23,8 @@ require 'database_cleaner'
 
 DatabaseCleaner.strategy = :truncation
 
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |file| require file }
+
 VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
   config.hook_into :webmock # or :fakeweb
