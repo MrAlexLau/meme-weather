@@ -1,4 +1,4 @@
-class WeatherInfo < ActiveRecord::Base
+class WeatherStatus < ActiveRecord::Base
   # Tag locations since many search terms may refer to a single location.
   # Eg - The "90001" and "Los Angeles" location tags would
   #      both refer to the city of Los Angeles.

@@ -1,10 +1,10 @@
 (function (ns) {
   ns.Home = {
-    formattedDescription: function (weatherInfo) {
-      var location = weatherInfo.location_name,
-          conditions = weatherInfo.weather_conditions,
-          temp = weatherInfo.temperature,
-          tempUnit = weatherInfo.temperature_unit;
+    formattedDescription: function (weatherStatus) {
+      var location = weatherStatus.location_name,
+          conditions = weatherStatus.weather_conditions,
+          temp = weatherStatus.temperature,
+          tempUnit = weatherStatus.temperature_unit;
 
       return "" + location + " is " + temp + "&deg; " + tempUnit + " and conditions are " + conditions;
     },

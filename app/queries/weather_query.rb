@@ -7,7 +7,7 @@ class WeatherQuery
 
       time_threshold = Time.zone.now - options[:timeframe]
 
-      current_weather = WeatherInfo.updated_after(time_threshold).tagged_with(location).first
+      current_weather = WeatherStatus.updated_after(time_threshold).tagged_with(location).first
 
       # Only call weather_from_service if no existing record is found.
       current_weather ||= weather_from_service(location, time_threshold)
@@ -26,22 +26,22 @@ class WeatherQuery
 
       # After the service normalizes the location unique identifier,
       # check to see if any other records already match this location.
-      weather_info = WeatherInfo.updated_after(time_threshold).where(location_uid: current_weather[:location_uid]).first
+      weather_status = WeatherStatus.updated_after(time_threshold).where(location_uid: current_weather[:location_uid]).first
 
       # If no record is found, create a new one.
-      unless weather_info
-        weather_info = weather_info_from_response(current_weather)
+      unless weather_status
+        weather_status = weather_status_from_response(current_weather)
       end
 
       # Add the given location to the tags for the weather record.
-      weather_info.location_list.add(location)
-      weather_info.save
+      weather_status.location_list.add(location)
+      weather_status.save
 
-      weather_info
+      weather_status
     end
 
-    def weather_info_from_response(weather_response)
-      WeatherInfo.new({
+    def weather_status_from_response(weather_response)
+      WeatherStatus.new({
         location_uid: weather_response[:location_uid],
         location_name: weather_response[:location_name],
         temperature: weather_response[:temperature],

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331212707) do
+ActiveRecord::Schema.define(version: 20160401161706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20160331212707) do
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
-  create_table "weather_infos", force: true do |t|
+  create_table "weather_statuses", force: true do |t|
     t.string   "location_name",     null: false
     t.float    "temperature",       null: false
     t.string   "temperature_unit",  null: false
