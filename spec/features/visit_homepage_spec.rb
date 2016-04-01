@@ -7,7 +7,7 @@ feature "Looking up the weather" do
       fill_in "location", :with => "San Jose"
       click_button "Go"
 
-      expect(page).to have_text("Go San Jose is 64.24° F and condtions are scattered clouds")
+      expect(page).to have_text("Go San Jose is 64.24° F and conditions are scattered clouds")
     end
   end
 

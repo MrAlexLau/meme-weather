@@ -24,9 +24,9 @@ class WeatherQuery
     def weather_from_service(location, time_threshold)
       current_weather = WeatherService.current_weather(location)
 
-      # After the service normalizes the location name,
+      # After the service normalizes the location unique identifier,
       # check to see if any other records already match this location.
-      weather_info = WeatherInfo.updated_after(time_threshold).where(location_name: current_weather[:location_name]).first
+      weather_info = WeatherInfo.updated_after(time_threshold).where(location_uid: current_weather[:location_uid]).first
 
       # If no record is found, create a new one.
       unless weather_info
@@ -42,6 +42,7 @@ class WeatherQuery
 
     def weather_info_from_response(weather_response)
       WeatherInfo.new({
+        location_uid: weather_response[:location_uid],
         location_name: weather_response[:location_name],
         temperature: weather_response[:temperature],
         temperature_unit: weather_response[:temperature_unit],

@@ -6,7 +6,7 @@
           temp = weatherInfo.temperature,
           tempUnit = weatherInfo.temperature_unit;
 
-      return "" + location + " is " + temp + "&deg; " + tempUnit + " and condtions are " + conditions;
+      return "" + location + " is " + temp + "&deg; " + tempUnit + " and conditions are " + conditions;
     },
 
     startWorking: function () {
