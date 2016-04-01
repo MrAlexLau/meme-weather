@@ -2,7 +2,7 @@ class WeatherQuery
   class << self
     # Query weather data. Whether that means looking it up
     # in a db table or fetching the data from a service.
-    def find_by_location(location, opts={})
+    def find_or_create_by_location(location, opts={})
       options = default_options(opts)
 
       time_threshold = Time.zone.now - options[:timeframe]
