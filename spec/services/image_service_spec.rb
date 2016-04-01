@@ -5,9 +5,12 @@ describe ImageService do
   subject { ImageService }
 
   describe "#search" do
-    it "returns a link" do
+    it "returns a list of image links" do
       VCR.use_cassette("image_search", record: :none) do
-        expect(subject.search(search_term)).to start_with("http")
+        results = subject.search(search_term)
+        results.each do |link|
+          expect(link).to start_with("http")
+        end
       end
     end
   end

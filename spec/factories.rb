@@ -9,4 +9,8 @@ FactoryGirl.define do
     short_description "Rain"
     last_updated_at Time.zone.now
   end
+
+  factory :meme_image do
+    image_url 'http://example.com/image.png'
+  end
 end

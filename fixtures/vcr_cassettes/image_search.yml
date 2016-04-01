@@ -288,4 +288,292 @@ http_interactions:
         bFdpZHRoIjogMTIwCiAgIH0KICB9CiBdCn0K
     http_version: 
   recorded_at: Sun, 20 Mar 2016 17:50:05 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/customsearch/v1?cx=<GOOGLE_CSE_CX>&key=<GOOGLE_CSE_KEY>&q=dog%20snowy%20meme&searchType=image
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Fri, 01 Apr 2016 20:31:29 GMT
+      Date:
+      - Fri, 01 Apr 2016 20:31:29 GMT
+      Cache-Control:
+      - private, max-age=0, must-revalidate, no-transform
+      Etag:
+      - '"BRLm7q8AZ5DqK4XXqDRxj-0e4Tc/p6HOmw0yWshJRAZL2RrNsFXOA-0"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '10654'
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="32,31,30,29,28,27,26,25"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "customsearch#search",
+         "url": {
+          "type": "application/json",
+          "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+         },
+         "queries": {
+          "nextPage": [
+           {
+            "title": "Google Custom Search - dog snowy meme",
+            "totalResults": "15000000",
+            "searchTerms": "dog snowy meme",
+            "count": 10,
+            "startIndex": 11,
+            "inputEncoding": "utf8",
+            "outputEncoding": "utf8",
+            "safe": "off",
+            "cx": "<GOOGLE_CSE_CX>",
+            "searchType": "image"
+           }
+          ],
+          "request": [
+           {
+            "title": "Google Custom Search - dog snowy meme",
+            "totalResults": "15000000",
+            "searchTerms": "dog snowy meme",
+            "count": 10,
+            "startIndex": 1,
+            "inputEncoding": "utf8",
+            "outputEncoding": "utf8",
+            "safe": "off",
+            "cx": "<GOOGLE_CSE_CX>",
+            "searchType": "image"
+           }
+          ]
+         },
+         "context": {
+          "title": "meme-weather"
+         },
+         "searchInformation": {
+          "searchTime": 0.417667,
+          "formattedSearchTime": "0.42",
+          "totalResults": "15000000",
+          "formattedTotalResults": "15,000,000"
+         },
+         "items": [
+          {
+           "kind": "customsearch#result",
+           "title": "The 20 Funniest Snow Memes Ever | WorldWideInterweb",
+           "htmlTitle": "The 20 Funniest \u003cb\u003eSnow Memes\u003c/b\u003e Ever | WorldWideInterweb",
+           "link": "http://www.worldwideinterweb.com/images/blogphotos/Funny/Snow%20Memes/snow%20dog%20meme.JPG",
+           "displayLink": "www.worldwideinterweb.com",
+           "snippet": "snow dog meme",
+           "htmlSnippet": "\u003cb\u003esnow dog meme\u003c/b\u003e",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "http://www.worldwideinterweb.com/9402-funniest-snow-memes-ever/",
+            "height": 597,
+            "width": 444,
+            "byteSize": 36332,
+            "thumbnailLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcReCvx-IhM4MGmH-eHkM8Q-ZwwY5meBft_hwrkLqna9nVKIx-A66n6ZgOA",
+            "thumbnailHeight": 135,
+            "thumbnailWidth": 100
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Snow Dogs on Pinterest | Sled Dogs, Samoyed and Husky",
+           "htmlTitle": "\u003cb\u003eSnow Dogs\u003c/b\u003e on Pinterest | Sled \u003cb\u003eDogs\u003c/b\u003e, Samoyed and Husky",
+           "link": "https://s-media-cache-ak0.pinimg.com/236x/37/7b/f2/377bf2ac136f8c20a7feeb9af80c6292.jpg",
+           "displayLink": "www.pinterest.com",
+           "snippet": "Alaskan flat tire, meme, dog",
+           "htmlSnippet": "Alaskan flat tire, \u003cb\u003ememe\u003c/b\u003e, \u003cb\u003edog\u003c/b\u003e",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "https://www.pinterest.com/aprilpooch/snow-dogs/",
+            "height": 271,
+            "width": 236,
+            "byteSize": 17840,
+            "thumbnailLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSXVIOMGkG4RjQYHIjMmwxqzgPIQpuMedo3S4hzjRJrz4t3dFqPyJxLbg",
+            "thumbnailHeight": 113,
+            "thumbnailWidth": 98
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Funny And Adorable Videos. Cat Meme And Dog Pictures.",
+           "htmlTitle": "Funny And Adorable Videos. Cat \u003cb\u003eMeme\u003c/b\u003e And \u003cb\u003eDog\u003c/b\u003e Pictures.",
+           "link": "http://www.awwsauce.com/wp-content/uploads/2015/01/snow-horse-goat-friends-300x200.jpg",
+           "displayLink": "www.awwsauce.com",
+           "snippet": "That's What Friends Are For",
+           "htmlSnippet": "That&#39;s What Friends Are For",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "http://www.awwsauce.com/",
+            "height": 200,
+            "width": 300,
+            "byteSize": 24309,
+            "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjwblbCJWbo-oGY6gj5Bdn-Fy3I1InBWUQW_Kc_4Ox8RoYZ1PRqYmThH8",
+            "thumbnailHeight": 77,
+            "thumbnailWidth": 116
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "The 20 Funniest Snow Memes Ever | WorldWideInterweb",
+           "htmlTitle": "The 20 Funniest \u003cb\u003eSnow Memes\u003c/b\u003e Ever | WorldWideInterweb",
+           "link": "http://www.worldwideinterweb.com/images/blogphotos/Funny/Snow%20Memes/snow%20dog%20memes.JPG",
+           "displayLink": "www.worldwideinterweb.com",
+           "snippet": "snow dog memes",
+           "htmlSnippet": "\u003cb\u003esnow dog memes\u003c/b\u003e",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "http://www.worldwideinterweb.com/9402-funniest-snow-memes-ever/",
+            "height": 660,
+            "width": 435,
+            "byteSize": 28267,
+            "thumbnailLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ2afV3-Nniir_ZFiDUGdlg0PBI4uL2wYmkmoHNMsaAp1HRX3WmvtUaUPw",
+            "thumbnailHeight": 138,
+            "thumbnailWidth": 91
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Martini Fridays: 64 Laps of Mildly Profane Silliness | another ...",
+           "htmlTitle": "Martini Fridays: 64 Laps of Mildly Profane Silliness | another \u003cb\u003e...\u003c/b\u003e",
+           "link": "http://anothermotherrunner.com/wp-content/uploads/2014/02/cat-in-snow-meme.jpg",
+           "displayLink": "anothermotherrunner.com",
+           "snippet": "Angry cats, angry mother",
+           "htmlSnippet": "Angry cats, angry mother",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "http://anothermotherrunner.com/2014/02/20/martinifridays64laps/",
+            "height": 513,
+            "width": 540,
+            "byteSize": 38951,
+            "thumbnailLink": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS6mTtmGJhs0jaHHozK_UgUxjIGmjn2e2rCguXIyRZF9xB-c_9mL7w-tRA",
+            "thumbnailHeight": 125,
+            "thumbnailWidth": 132
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Funny Blog | All posts tagged 'funny-winter'",
+           "htmlTitle": "Funny Blog | All posts tagged &#39;funny-winter&#39;",
+           "link": "http://www.thefunnyblog.org/wp-content/uploads/2013/11/snow-fight-funny-cat-meme.jpg",
+           "displayLink": "www.thefunnyblog.org",
+           "snippet": "snow fight funny cat meme",
+           "htmlSnippet": "\u003cb\u003esnow\u003c/b\u003e fight funny cat \u003cb\u003ememe\u003c/b\u003e",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "http://www.thefunnyblog.org/?tag=/funny-winter",
+            "height": 371,
+            "width": 500,
+            "byteSize": 57893,
+            "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn8eU9YXAKebCMHI6oqwD_6EXpp8L2_NlD9IK-Em-jEpc-lyfU35-1VCA",
+            "thumbnailHeight": 96,
+            "thumbnailWidth": 130
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "FunniestMemes.com - Funny Memes - [Usually my dog likes to chill ...",
+           "htmlTitle": "FunniestMemes.com - Funny \u003cb\u003eMemes\u003c/b\u003e - [Usually my \u003cb\u003edog\u003c/b\u003e likes to chill \u003cb\u003e...\u003c/b\u003e",
+           "link": "http://www.funniestmemes.com/wp-content/uploads/2014/11/Funniest_Memes_usually-my-dog-likes-to-chill-on-the-porch-this-is-the-path-he-made-this-morning-after-he-realized-how-cold-and-snowy-it-was_13887.jpeg",
+           "displayLink": "www.funniestmemes.com",
+           "snippet": "Funny Memes Usually my dog",
+           "htmlSnippet": "Funny \u003cb\u003eMemes\u003c/b\u003e Usually my \u003cb\u003edog\u003c/b\u003e",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "http://www.funniestmemes.com/funny-memes-usually-my-dog-likes-to-chill-on-the-porch-this-is-the-path-he-made-this-morning-after-he-realized-how-cold-and-snowy-it-was/",
+            "height": 1024,
+            "width": 768,
+            "byteSize": 97098,
+            "thumbnailLink": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSorciUNJXSYEUC4nIgKg2tgVbpcNbVWDCD59EiK-2xgeia24aMyip3oyOS",
+            "thumbnailHeight": 150,
+            "thumbnailWidth": 113
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Snow Meme on Pinterest | Snow Day Meme, Meme Pics and Memes",
+           "htmlTitle": "\u003cb\u003eSnow Meme\u003c/b\u003e on Pinterest | \u003cb\u003eSnow\u003c/b\u003e Day \u003cb\u003eMeme\u003c/b\u003e, \u003cb\u003eMeme\u003c/b\u003e Pics and \u003cb\u003eMemes\u003c/b\u003e",
+           "link": "https://s-media-cache-ak0.pinimg.com/236x/59/d6/22/59d622467b6c8c6bd7d1f892276097f0.jpg",
+           "displayLink": "www.pinterest.com",
+           "snippet": "Funniest Snow Memes Ever",
+           "htmlSnippet": "Funniest \u003cb\u003eSnow Memes\u003c/b\u003e Ever",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "https://www.pinterest.com/explore/snow-meme/",
+            "height": 317,
+            "width": 236,
+            "byteSize": 24894,
+            "thumbnailLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Ov1wCHQdS3kWl-k5W62z6_F6bsTAKWJ-LgsI-nspCutLdDCqx29HYw",
+            "thumbnailHeight": 118,
+            "thumbnailWidth": 88
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "The 20 Funniest Snow Memes Ever | WorldWideInterweb",
+           "htmlTitle": "The 20 Funniest \u003cb\u003eSnow Memes\u003c/b\u003e Ever | WorldWideInterweb",
+           "link": "http://www.worldwideinterweb.com/images/blogphotos/Funny/Snow%20Memes/snow%20meme%20boss.JPG",
+           "displayLink": "www.worldwideinterweb.com",
+           "snippet": "snow meme boss",
+           "htmlSnippet": "\u003cb\u003esnow meme\u003c/b\u003e boss",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "http://www.worldwideinterweb.com/9402-funniest-snow-memes-ever/",
+            "height": 496,
+            "width": 495,
+            "byteSize": 36113,
+            "thumbnailLink": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT_JNIsgkIgUH39P4L05a-WsonhiDHCNchBhNc9tpuAzjLvKq6qr0XU6dxfEw",
+            "thumbnailHeight": 130,
+            "thumbnailWidth": 130
+           }
+          },
+          {
+           "kind": "customsearch#result",
+           "title": "Cold Weather Funny on Pinterest | Weather Memes, Funny quotes and ...",
+           "htmlTitle": "Cold Weather Funny on Pinterest | Weather \u003cb\u003eMemes\u003c/b\u003e, Funny quotes and \u003cb\u003e...\u003c/b\u003e",
+           "link": "https://s-media-cache-ak0.pinimg.com/736x/dd/ee/dc/ddeedc9026136f8d9f783affc6f29c12.jpg",
+           "displayLink": "www.pinterest.com",
+           "snippet": "funny dogs running snow",
+           "htmlSnippet": "funny \u003cb\u003edogs\u003c/b\u003e running \u003cb\u003esnow\u003c/b\u003e",
+           "mime": "image/jpeg",
+           "image": {
+            "contextLink": "https://www.pinterest.com/explore/cold-weather-funny/",
+            "height": 347,
+            "width": 499,
+            "byteSize": 29627,
+            "thumbnailLink": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSiZazR78bWGLd5P7k0D_onIMlwbpNPkCOkbc-_sWxuNUjUg9jdWxW6cg8",
+            "thumbnailHeight": 90,
+            "thumbnailWidth": 130
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Fri, 01 Apr 2016 20:31:29 GMT
 recorded_with: VCR 2.9.3

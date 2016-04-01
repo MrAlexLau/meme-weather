@@ -5,4 +5,5 @@ class WeatherStatus < ActiveRecord::Base
   acts_as_taggable_on :location
 
   scope :updated_after, ->(time) { where("last_updated_at > ?", time) }
+
 end
