@@ -52,6 +52,7 @@
       var searchTerm = $(".location").val();
 
       e.preventDefault();
+      document.activeElement.blur(); // hide the ios keyboard
 
       if (this.formIsValid(searchTerm)) {
         this.hideFlash();
