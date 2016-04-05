@@ -9,6 +9,7 @@
       </div>
 
       <form class="location-form">
+        <%= image_tag "ajax-loader.gif", class: 'loader' %>
         <div class="input-group">
           <input type="text" class="form-control location" id="location" placeholder="City or Zip">
 
@@ -21,7 +22,6 @@
   </div>
 </div>
 
-<%= image_tag "ajax-loader.gif", class: 'loader' %>
 
 <div class="results container-fluid">
   <div class="description-container">

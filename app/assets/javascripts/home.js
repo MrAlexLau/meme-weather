@@ -34,9 +34,6 @@
       // Note that the theme is hardcoded as "cats". TODO: abstract this
       var url = "/api/weather_memes/search?location=" + term + "&theme=cat";
 
-      // Clear out the previous image.
-      $('.results .meme').attr('src', '');
-
       $.ajax(url)
         .done(_.bind(function(result) {
           $('.results').fadeIn();
@@ -57,7 +54,6 @@
       e.preventDefault();
 
       if (this.formIsValid(searchTerm)) {
-        $('.results').hide();
         this.hideFlash();
         this.startWorking();
       }
