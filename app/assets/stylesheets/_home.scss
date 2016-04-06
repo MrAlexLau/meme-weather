@@ -3,6 +3,8 @@
 
   .hero.container {
     margin-top: $base-line-height;
+    padding-left: $gutter;
+    padding-right: $gutter;
 
     .main-section {
       margin-top: $base-line-height * 2;
@@ -21,9 +23,16 @@
 
   .loader {
     display: none;
-    right: -25px;
+    right: -10px;
     position: absolute;
-    width: 32px;
+    top: 5px;
+    width: 20px;
+
+    @media (min-width: $screen-xs-max) {
+      right: -25px;
+      top: 0;
+      width: 32px;
+    }
   }
 
   .results {
@@ -47,6 +56,9 @@
 
     .description {
       font-size: $font-size-base * 1.5;
+      margin: 0;
+      padding: 0;
+
       @media (min-width: $screen-md-min) {
         font-size: $font-size-base * 2;
       }
