@@ -33,16 +33,22 @@ gem 'open-weather'
 gem 'httparty'
 gem 'acts-as-taggable-on', '~> 3.4'
 
-group :development, :test do
-  gem 'factory_girl_rails'
-  gem 'rspec-rails', '>= 2.14'
-  gem 'spork'
-  gem 'spork-rails'
+group :development do
   gem 'guard'
   gem 'guard-shell'
   gem 'guard-spork'
   gem 'guard-rspec'
   gem 'guard-bundler'
+  gem "guard-livereload",  :require => false
+  gem "rack-livereload"
+  gem "rb-fsevent",        :require => false
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '>= 2.14'
+  gem 'spork'
+  gem 'spork-rails'
   gem 'terminal-notifier-guard'
   gem 'terminal-notifier'
   gem "parallel_tests"

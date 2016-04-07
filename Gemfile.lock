@@ -59,7 +59,11 @@ GEM
       safe_yaml (~> 1.0.0)
     database_cleaner (1.5.1)
     diff-lcs (1.2.5)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
+    eventmachine (1.2.0.1)
     execjs (2.6.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -84,6 +88,11 @@ GEM
       guard (~> 2.2)
       guard-compat (~> 1.1)
     guard-compat (1.2.1)
+    guard-livereload (2.5.2)
+      em-websocket (~> 0.5)
+      guard (~> 2.8)
+      guard-compat (~> 1.0)
+      multi_json (~> 1.8)
     guard-rspec (4.6.4)
       guard (~> 2.1)
       guard-compat (~> 1.1)
@@ -96,6 +105,7 @@ GEM
       guard (~> 2.0)
       guard-compat (~> 1.0)
       spork (>= 0.8.4)
+    http_parser.rb (0.6.0)
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -141,6 +151,8 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.5.5)
+    rack-livereload (0.3.15)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.8)
@@ -244,6 +256,7 @@ DEPENDENCIES
   font-awesome-rails
   guard
   guard-bundler
+  guard-livereload
   guard-rspec
   guard-shell
   guard-spork
@@ -254,7 +267,9 @@ DEPENDENCIES
   parallel_tests
   pg
   poltergeist
+  rack-livereload
   rails (= 4.1.8)
+  rb-fsevent
   rspec-rails (>= 2.14)
   sass-rails (>= 3.2)
   sdoc (~> 0.4.0)
