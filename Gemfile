@@ -63,7 +63,7 @@ group :test do
   gem "poltergeist"
 end
 
-# gem 'puma'
+gem 'puma'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
