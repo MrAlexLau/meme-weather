@@ -7,7 +7,7 @@ class Setting
 
   def initialize(defaults)
     defaults = (defaults || {}).deep_symbolize_keys
-    self.theme = defaults[:theme] || 'dog'
+    self.theme = defaults[:theme] || 'cat'
     self.search_term = defaults[:search_term]
   end
 
