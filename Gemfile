@@ -63,6 +63,7 @@ group :test do
   gem "poltergeist"
 end
 
+gem 'rails_12factor', group: :production
 gem 'puma'
 
 # Use ActiveModel has_secure_password
