@@ -1,0 +1,13 @@
+<div class="settings">
+  <%= form_for settings do |f| %>
+    <%= f.hidden_field :theme %>
+  <% end %>
+
+  <span class="field-title">Theme</span>
+  <!-- <input type="hidden" name="theme"> -->
+  <div class="btn-group btn-group-theme" role="group">
+    <button type="button" class="btn btn-default btn-info" data-value="cat">Cats</button>
+    <button type="button" class="btn btn-default" data-value="dog">Dogs</button>
+    <button type="button" class="btn btn-default" data-value="none">Anything</button>
+  </div>
+</div>

@@ -2,12 +2,11 @@
   text-align: center;
 
   .hero.container {
-    margin-top: $base-line-height;
     padding-left: $gutter;
     padding-right: $gutter;
 
     .main-section {
-      margin-top: $base-line-height * 2;
+      margin-top: $base-line-height;
     }
 
     .location {

@@ -1,7 +1,5 @@
 <div class="home">
 <div class="hero container">
-  <h2 class="title">Meme Weather</h2>
-
   <div class="row main-section">
     <div class="col-lg-6 col-lg-offset-3">
       <div class="flash alert alert-danger" role="alert">
@@ -11,7 +9,7 @@
       <form class="location-form">
         <%= image_tag "ajax-loader.gif", class: 'loader' %>
         <div class="input-group">
-          <input type="text" class="form-control location" id="location" placeholder="City or Zip">
+          <input type="text" class="form-control location" id="location" placeholder="City or Zip" value="<%= @settings.search_term %>">
 
           <span class="input-group-btn">
             <button class="btn btn-default btn-success" type="submit">Go</button>
@@ -21,7 +19,6 @@
     </div>
   </div>
 </div>
-
 
 <div class="results container-fluid">
   <div class="description-container">
