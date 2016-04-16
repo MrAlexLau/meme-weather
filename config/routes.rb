@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  resources :settings
+
   # Internal API routes
   namespace :api do
     resources :weather_memes do

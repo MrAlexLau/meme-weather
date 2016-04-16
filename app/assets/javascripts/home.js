@@ -32,7 +32,8 @@
 
     fetchWeather: function (term) {
       // Note that the theme is hardcoded as "cats". TODO: abstract this
-      var url = "/api/weather_memes/search?location=" + term + "&theme=cat";
+      var theme = ns.Settings.selectedTheme(),
+          url = "/api/weather_memes/search?location=" + term + "&theme=" + theme;
 
       $.ajax(url)
         .done(_.bind(function(result) {
