@@ -5,8 +5,8 @@ class Setting
 
   attr_accessor :theme, :search_term
 
-  def initialize(defaults={})
-    defaults = defaults.deep_symbolize_keys
+  def initialize(defaults)
+    defaults = (defaults || {}).deep_symbolize_keys
     self.theme = defaults[:theme] || 'dog'
     self.search_term = defaults[:search_term]
   end
