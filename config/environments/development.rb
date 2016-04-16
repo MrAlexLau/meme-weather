@@ -28,7 +28,7 @@ Rails.application.configure do
   config.assets.debug = true
 
   # Automatically inject JavaScript needed for LiveReload
-  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+  # config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
