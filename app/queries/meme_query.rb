@@ -1,18 +1,25 @@
 class MemeQuery
   class << self
-    def find_or_create_by_tags(tags)
-      # Example of some tags: ["cat", "rainy", "meme"]
-      memes = MemeImage.tagged_with(tags)
+    MIN_RANKING = 0
 
-      # TODO: ranking and filtering could go here
+    def find_or_create_by_tags(tags)
+      memes = filtered_memes(tags)
 
       # If no images are found, fetch some.
-      fetch_memes!(tags) unless memes.any?
+      unless memes.any?
+        fetch_memes!(tags)
+        memes = filtered_memes(tags)
+      end
 
-      MemeImage.tagged_with(tags).sample
+      memes.sample
     end
 
     private
+
+    def filtered_memes(tags)
+      # Example of some tags: ["cat", "rainy", "meme"]
+      MemeImage.tagged_with(tags).where("rating >= ?", MIN_RANKING)
+    end
 
     def fetch_memes!(tags)
       links = ImageService.search(tags.join(" "))

@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   ROLES = %w[admin moderator author banned].freeze
+
+  def is?(proposed_role)
+    self.role == proposed_role.to_s
+  end
 end

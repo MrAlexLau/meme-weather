@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -15,7 +14,12 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'profile' => 'user#profile'
+  devise_for :users
+
+  get 'profile' => 'users#profile'
+  get 'memes/manage' => 'meme_images#manage'
+  put 'memes/:id/vote_up' => 'meme_images#vote_up'
+  put 'memes/:id/vote_down' => 'meme_images#vote_down'
 
 
   # Example of regular route:
