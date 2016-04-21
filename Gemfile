@@ -32,6 +32,7 @@ gem 'underscore-rails'
 gem 'open-weather'
 gem 'httparty'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'devise'
 
 group :development do
   gem 'guard'

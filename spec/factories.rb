@@ -1,5 +1,8 @@
 # This will guess the User class
 FactoryGirl.define do
+  factory :user do
+    
+  end
   factory :weather_status do
     location_uid "lat:123::lon:456"
     location_name "Austin"

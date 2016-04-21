@@ -1,28 +1,42 @@
-<div class="home">
-<div class="hero container">
-  <div class="row main-section">
-    <div class="col-lg-6 col-lg-offset-3">
-      <div class="flash alert alert-danger" role="alert">
-        <span class="flash-message"></span>
-      </div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <span class="title">Meme Weather</span>
 
-      <form class="location-form">
-        <%= image_tag "ajax-loader.gif", class: 'loader' %>
-        <div class="input-group">
-          <input type="text" class="form-control location" id="location" placeholder="City or Zip" value="<%= @settings.search_term %>">
-
-          <span class="input-group-btn">
-            <button class="btn btn-default btn-success" type="submit">Go</button>
-          </span>
-        </div>
-      </form>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="settings-trigger">
+      <i class="fa fa-angle-down"></i>
     </div>
   </div>
-</div>
 
-<div class="results container-fluid">
-  <div class="description-container">
-    <p class="description"></p>
+  <%= render partial: "settings", locals: { settings: @settings } %>
+</nav>
+
+<div class="home">
+  <div class="hero container">
+    <div class="row main-section">
+      <div class="col-lg-6 col-lg-offset-3">
+        <div class="flash alert alert-danger" role="alert">
+          <span class="flash-message"></span>
+        </div>
+
+        <form class="location-form">
+          <%= image_tag "ajax-loader.gif", class: 'loader' %>
+          <div class="input-group">
+            <input type="text" class="form-control location" id="location" placeholder="City or Zip" value="<%= @settings.search_term %>">
+
+            <span class="input-group-btn">
+              <button class="btn btn-default btn-success" type="submit">Go</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-  <img class="meme"></img>
+
+  <div class="results container-fluid">
+    <div class="description-container">
+      <p class="description"></p>
+    </div>
+    <img class="meme"></img>
+  </div>
 </div>
