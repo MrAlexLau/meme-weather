@@ -10,9 +10,17 @@
 </head>
 <body>
 
-<!--
-<p class="notice"><%#= notice %></p>
-<p class="alert"><%#= alert %></p> -->
+<%= yield :header %>
+
+<%- if notice %>
+  <div class="alert alert-info" role="alert">
+    <span class="message"><%= notice %></span>
+  </div>
+<%- elsif alert %>
+  <div class="alert alert-danger" role="alert">
+    <span class="message"><%= alert %></span>
+  </div>
+<%- end %>
 
 <%= yield %>
 

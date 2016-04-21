@@ -1,15 +1,17 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <span class="title">Meme Weather</span>
+<% content_for :header do %>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <span class="title">Meme Weather</span>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="settings-trigger">
-      <i class="fa fa-angle-down"></i>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="settings-trigger">
+        <i class="fa fa-angle-down"></i>
+      </div>
     </div>
-  </div>
 
-  <%= render partial: "settings", locals: { settings: @settings } %>
-</nav>
+    <%= render partial: "settings", locals: { settings: @settings } %>
+  </nav>
+<% end %>
 
 <div class="home">
   <div class="hero container">

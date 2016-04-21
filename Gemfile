@@ -33,6 +33,7 @@ gem 'open-weather'
 gem 'httparty'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'devise'
+gem 'cancan'
 
 group :development do
   gem 'guard'

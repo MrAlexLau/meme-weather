@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'profile' => 'user#profile'
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
