@@ -1,5 +1,5 @@
 (function (ns) {
-  ns.ManageMemes = {
+  ns.VoteMemes = {
     Filters: {
       bindEvents: function () {
         $('.filter-btn').on('click', function (e) {
@@ -10,7 +10,7 @@
           $target.toggleClass('active');
           $target.toggleClass('btn-primary');
 
-          ns.ManageMemes.render();
+          ns.VoteMemes.render();
         });
       }
     },
@@ -79,13 +79,13 @@
     },
 
     bindEvents: function () {
-      $('.manage-memes .vote-down').on("click", _.bind(ns.ManageMemes.voteDown, ns.ManageMemes));
-      $('.manage-memes .vote-up').on("click", _.bind(ns.ManageMemes.voteUp, ns.ManageMemes));
+      $('.vote-memes .vote-down').on("click", _.bind(ns.VoteMemes.voteDown, ns.VoteMemes));
+      $('.vote-memes .vote-up').on("click", _.bind(ns.VoteMemes.voteUp, ns.VoteMemes));
     }
   };
 
   $(function() {
-    ns.ManageMemes.render();
-    ns.ManageMemes.Filters.bindEvents();
+    ns.VoteMemes.render();
+    ns.VoteMemes.Filters.bindEvents();
   });
 })(window.MemeWeather);

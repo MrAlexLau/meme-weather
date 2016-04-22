@@ -4,6 +4,9 @@ class MemeImagesController < ApplicationController
   def manage
   end
 
+  def vote
+  end
+
   def search
     @images = MemeImage.all
 

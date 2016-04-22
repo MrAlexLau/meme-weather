@@ -1,6 +1,6 @@
 <%- images.each do |image| %>
   <div class="meme-image <%= "meme-image-#{image.id}" %>">
-    <%= image_tag image.image_url, class: 'managed-image' %>
+    <%= image_tag image.image_url, class: 'vote-on-image' %>
 
     <div class="meme-tags">
       Tags: <%= image.tag_list %>
