@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get 'profile' => 'users#profile'
   get 'memes/manage' => 'meme_images#manage'
+  get 'memes/search' => 'meme_images#search'
   put 'memes/:id/vote_up' => 'meme_images#vote_up'
   put 'memes/:id/vote_down' => 'meme_images#vote_down'
 

@@ -2,7 +2,20 @@ class MemeImagesController < ApplicationController
   before_filter :authorize_edit
 
   def manage
-    @images = MemeImage.all.order(:id)
+  end
+
+  def search
+    @images = MemeImage.all
+
+    if params[:neutral_rating].to_i == 1
+      @images = MemeImage.where(rating: 0)
+    end
+
+    @images = @images.order(:id)
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   def vote_up

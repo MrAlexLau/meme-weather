@@ -1,23 +1,10 @@
 <div class="manage-memes">
-  <%- @images.each do |image| %>
-    <div class="meme-image <%= "meme-image-#{image.id}" %>">
-      <%= image_tag image.image_url, class: 'managed-image' %>
+  <div class="filters">
+    <h4 class="filter-title">Filters</h4>
+    <button class="btn filter-btn" data-filter-name="neutral_rating">
+      <i class="fa fa-check"></i> Neutral rated
+    </button>
+  </div>
 
-      <div class="input-group meme-rating-controls">
-        <div class="input-group-btn">
-          <%= button_tag type: 'button', class: 'btn btn-default btn-danger vote-down', data: { image_id: image.id } do %>
-            <i class="fa fa-thumbs-down"></i>
-          <% end %>
-        </div>
-
-        <%= text_field_tag 'rating', image.rating, class: "form-control meme-rating", readonly: true %>
-
-        <div class="input-group-btn">
-          <%= button_tag type: 'button', class: 'btn btn-default btn-success vote-up', data: { image_id: image.id } do %>
-            <i class="fa fa-thumbs-up"></i>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  <%- end %>
+  <div class="images"></div>
 </div>
