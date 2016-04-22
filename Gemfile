@@ -34,6 +34,7 @@ gem 'httparty'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'devise'
 gem 'cancan'
+gem 'mailgun_rails'
 
 group :development do
   gem 'guard'

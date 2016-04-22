@@ -67,6 +67,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    domain_name (0.5.20160310)
+      unf (>= 0.0.5, < 1.0.0)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -113,6 +115,8 @@ GEM
       guard (~> 2.0)
       guard-compat (~> 1.0)
       spork (>= 0.8.4)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     http_parser.rb (0.6.0)
     httparty (0.13.7)
       json (~> 1.8)
@@ -131,6 +135,10 @@ GEM
     lumberjack (1.0.10)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    mailgun_rails (0.8.0)
+      actionmailer (>= 3.2.13)
+      json (>= 1.7.7)
+      rest-client (>= 1.6.7)
     method_source (0.8.2)
     mime-types (2.99.1)
     mini_portile (0.6.0)
@@ -138,6 +146,7 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     nenv (0.3.0)
+    netrc (0.11.0)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     notiffany (0.0.8)
@@ -193,6 +202,10 @@ GEM
       json (~> 1.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -250,6 +263,9 @@ GEM
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     underscore-rails (1.8.3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
     vcr (2.9.3)
     warden (1.2.6)
       rack (>= 1.0)
@@ -284,6 +300,7 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   jquery-rails
+  mailgun_rails
   open-weather
   parallel_tests
   pg
