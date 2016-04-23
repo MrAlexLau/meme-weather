@@ -50,7 +50,9 @@
             tag_list: this.selector('search-box').val()
           };
 
-      e.preventDefault();
+      if (e) {
+        e.preventDefault();
+      }
 
       this.selector('no-results').hide();
       this.selector('results-summary').show();
@@ -74,6 +76,11 @@
   $(function() {
     if ($('.fetch-images').length > 0) {
       ns.FetchImages.bindEvents();
+
+      // If a search term is present, load memes.
+      if (ns.FetchImages.selector('search-box').val().length > 0) {
+        ns.FetchImages.render();
+      }
     }
   });
 })(window.MemeWeather);

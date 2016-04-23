@@ -2,7 +2,7 @@
   <div class="search-container">
     <form class="fetch-memes-form">
       <div class="input-group">
-        <input type="text" class="form-control search-box" placeholder="Enter tags, separated by a space">
+        <%= text_field_tag 'search', params[:keyword], placeholder: 'Enter tags, separated by a space', class: "form-control search-box" %>
         <span class="input-group-btn">
           <button class="btn btn-default btn-success btn-search" type="submit">Search</button>
         </span>

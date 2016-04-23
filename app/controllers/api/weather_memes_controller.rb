@@ -5,6 +5,7 @@ class Api::WeatherMemesController < ApplicationController
     weather_status = WeatherQuery.find_or_create_by_location(params[:location])
     themed_search_terms = [theme, weather_status.short_description, "meme"]
     meme = MemeQuery.find_or_create_by_tags(themed_search_terms)
+    save_search!(themed_search_terms)
 
     render json: {
       location_name: weather_status.location_name,
@@ -30,5 +31,12 @@ class Api::WeatherMemesController < ApplicationController
     }
 
     session[:settings] = new_settings
+  end
+
+  def save_search!(search_terms)
+    search_term = search_terms.sort.join(" ")
+    ms = MemeSearch.find_or_initialize_by({ search_term:  search_term })
+    ms.searches_count += 1
+    ms.save
   end
 end

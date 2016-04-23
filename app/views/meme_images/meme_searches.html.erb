@@ -1,0 +1,20 @@
+<div class="latest-meme-searches">
+  <h3>Latest Meme Searches</h3>
+
+  <table class="table">
+    <tr>
+      <th>Search Term</th>
+      <th>Searches</th>
+      <th>Meme Matches</th>
+      <th>Last Updated At</th>
+    </tr>
+    <%- @meme_searches.each do |meme_search| %>
+      <tr>
+        <td><%= link_to meme_search.search_term, fetch_memes_path({ keyword: meme_search.search_term }) %></td>
+        <td><%= pluralize(meme_search.searches_count, 'search') %></td>
+        <td><%= pluralize(meme_search.meme_matches, 'match') %></td>
+        <td><%= meme_search.updated_at %></td>
+      </tr>
+    <%- end %>
+  </table>
+</div>

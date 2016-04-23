@@ -15,6 +15,17 @@ class MemeImagesController < ApplicationController
     end
   end
 
+  def meme_searches
+    @meme_searches = MemeSearch.order("updated_at DESC").first(20).map do |meme_search|
+      OpenStruct.new({
+        search_term: meme_search.search_term,
+        searches_count: meme_search.searches_count,
+        updated_at: meme_search.updated_at,
+        meme_matches: MemeQuery.tagged_memes(meme_search.search_term.split(" ")).count
+      })
+    end
+  end
+
   def fetch_more
     tag_list = params[:tag_list].split(" ")
     tag_list << 'meme' unless tag_list.include?('meme')

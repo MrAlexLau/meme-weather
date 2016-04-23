@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'memes/manage' => 'meme_images#manage'
   get 'memes/vote' => 'meme_images#vote', as: :vote_memes
   get 'memes/fetch_images' => 'meme_images#fetch_images', as: :fetch_memes
+  get 'memes/meme_searches' => 'meme_images#meme_searches', as: :meme_searches
   post 'memes/fetch_more' => 'meme_images#fetch_more'
   get 'memes/search' => 'meme_images#search'
   put 'memes/:id/vote_up' => 'meme_images#vote_up'
