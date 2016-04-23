@@ -1,1 +1,1 @@
-$(".vote-on-memes .images").html("<%= escape_javascript(render partial: 'memes_list', locals: { images: @images } ) %>");
+$(".meme-list").html("<%= escape_javascript(render partial: 'memes_list', locals: { images: @images, hide_voting: @hide_voting } ) %>");

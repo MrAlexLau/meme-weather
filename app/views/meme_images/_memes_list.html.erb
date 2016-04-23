@@ -1,24 +1,30 @@
+<div class="image-results">
+  <h4><%= pluralize(images.count, 'image') %> found.</h4>
+</div>
 <%- images.each do |image| %>
-  <div class="meme-image <%= "meme-image-#{image.id}" %>">
-    <%= image_tag image.image_url, class: 'vote-on-image' %>
+  <div class="meme-image-container <%= "meme-image-#{image.id}" %>">
+    <%= image_tag image.image_url, class: 'meme-image' %>
 
     <div class="meme-tags">
       Tags: <%= image.tag_list %>
     </div>
-    <div class="input-group meme-rating-controls">
-      <div class="input-group-btn">
-        <%= button_tag type: 'button', class: 'btn btn-default btn-danger vote-down', data: { image_id: image.id } do %>
-          <i class="fa fa-thumbs-down"></i>
-        <% end %>
-      </div>
 
-      <%= text_field_tag 'rating', image.rating, class: "form-control meme-rating", readonly: true %>
+    <%- unless hide_voting %>
+      <div class="input-group meme-rating-controls">
+        <div class="input-group-btn">
+          <%= button_tag type: 'button', class: 'btn btn-default btn-danger vote-down', data: { image_id: image.id } do %>
+            <i class="fa fa-thumbs-down"></i>
+          <% end %>
+        </div>
 
-      <div class="input-group-btn">
-        <%= button_tag type: 'button', class: 'btn btn-default btn-success vote-up', data: { image_id: image.id } do %>
-          <i class="fa fa-thumbs-up"></i>
-        <% end %>
+        <%= text_field_tag 'rating', image.rating, class: "form-control meme-rating", readonly: true %>
+
+        <div class="input-group-btn">
+          <%= button_tag type: 'button', class: 'btn btn-default btn-success vote-up', data: { image_id: image.id } do %>
+            <i class="fa fa-thumbs-up"></i>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <%- end %>
   </div>
 <%- end %>

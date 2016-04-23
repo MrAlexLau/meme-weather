@@ -1,0 +1,21 @@
+<div class="fetch-images">
+  <div class="search-container">
+    <form class="fetch-memes-form">
+      <div class="input-group">
+        <input type="text" class="form-control search-box" placeholder="Enter tags, separated by a space">
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-success btn-search" type="submit">Search</button>
+        </span>
+      </div><!-- /input-group -->
+    </form>
+  </div><!-- /.row -->
+
+  <div class="results-summary">
+    <div class="no-results">No results found.</div>
+
+    Load <%= select_tag(:num_images, options_for_select(@num_images_selection)) %> more images?
+    <button class="btn btn-primary force-fetch">Fetch</button>
+  </div>
+  <div class="meme-list"></div>
+
+</div>

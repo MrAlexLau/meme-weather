@@ -85,7 +85,9 @@
   };
 
   $(function() {
-    ns.VoteMemes.render();
-    ns.VoteMemes.Filters.bindEvents();
+    if ($('.vote-on-memes').length > 0) {
+      ns.VoteMemes.render();
+      ns.VoteMemes.Filters.bindEvents();
+    }
   });
 })(window.MemeWeather);

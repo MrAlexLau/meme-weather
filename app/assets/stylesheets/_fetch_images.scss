@@ -1,0 +1,26 @@
+.fetch-images {
+  @include meme-list;
+
+  .search-container {
+    padding: $gutter;
+
+    .input-group {
+      margin: auto;
+      width: 50%;
+    }
+  }
+
+  .results-summary {
+    display: none;
+    text-align: center;
+
+    .force-fetch {
+      display: none;
+    }
+
+    .no-results {
+      display: none;
+      margin-bottom: $base-line-height;
+    }
+  }
+}
