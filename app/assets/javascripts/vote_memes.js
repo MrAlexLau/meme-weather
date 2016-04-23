@@ -79,8 +79,8 @@
     },
 
     bindEvents: function () {
-      $('.vote-memes .vote-down').on("click", _.bind(ns.VoteMemes.voteDown, ns.VoteMemes));
-      $('.vote-memes .vote-up').on("click", _.bind(ns.VoteMemes.voteUp, ns.VoteMemes));
+      $('.vote-on-memes .vote-down').on("click", _.bind(ns.VoteMemes.voteDown, ns.VoteMemes));
+      $('.vote-on-memes .vote-up').on("click", _.bind(ns.VoteMemes.voteUp, ns.VoteMemes));
     }
   };
 
